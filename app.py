@@ -119,6 +119,8 @@ def main():
             """
         JJ's To Do App is a streamlined task management system designed to help you efficiently organize and manage your tasks. Whether it's a simple chore or an important deadline, this app will help you keep track of everything you need to do, categorize tasks based on their status, and even set due dates.
 
+        Github Link: https://github.com/espin086/streamlit-crud-app
+
         Key Features:
         - Add new tasks along with their status and due date.
         - View all your tasks in a clear table format.

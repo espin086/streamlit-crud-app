@@ -113,8 +113,22 @@ def main():
                     result, columns=["Task", "Status", "Due Date"], index=None
                 )
                 st.dataframe(df)
-    else:
-        st.subheader("About")
+    elif choice == "About":
+        st.subheader("About JJ's To Do App")
+        st.write(
+            """
+        JJ's To Do App is a streamlined task management system designed to help you efficiently organize and manage your tasks. Whether it's a simple chore or an important deadline, this app will help you keep track of everything you need to do, categorize tasks based on their status, and even set due dates.
+
+        Key Features:
+        - Add new tasks along with their status and due date.
+        - View all your tasks in a clear table format.
+        - Update any task's information with a few clicks.
+        - Delete tasks once you've completed them or if they are no longer needed.
+
+        **About the Author**:
+        JJ Espinoza is an expert AI/ML Cloud Architect with extensive experience in designing and implementing intelligent systems. His expertise in the field ensures this app is built with the latest best practices, offering users a seamless and efficient task management experience.
+        """
+        )
 
     pass
 

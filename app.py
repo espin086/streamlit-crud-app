@@ -37,15 +37,16 @@ def main():
     elif choice == "Read":
         st.subheader("View Items")
         result = view_all_data()
-        st.write(result)
         with st.expander("View All Data"):
             df = pd.DataFrame(
                 result, columns=["Task", "Status", "Due Date"], index=None
             )
+            df = df.sort_values(by="Due Date")
             st.dataframe(df)
         with st.expander("Task Status"):
             task_df = df["Status"].value_counts().to_frame()
             task_df = task_df.reset_index()
+            df = df.sort_values(by="Due Date")
             st.dataframe(task_df)
             p1 = px.pie(task_df, names="index", values="Status")
             st.plotly_chart(p1)
@@ -61,7 +62,6 @@ def main():
         list_of_tasks = [i[0] for i in view_unique_tasks()]
         selected_task = st.selectbox("Task To Edit", list_of_tasks)
         selected_result = get_task(selected_task)
-        st.write(selected_result)
 
         if selected_result:
             task = selected_result[0][0]

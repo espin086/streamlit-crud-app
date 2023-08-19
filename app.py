@@ -11,11 +11,29 @@ from db_fxn import (
     delete_data,
 )
 
+# Apply some custom CSS
+st.markdown(
+    """
+<style>
+    .reportview-container {
+        background-color: #f4f4f4;
+    }
+    .sidebar .sidebar-content {
+        background-color: #ffffff;
+    }
+    h1 {
+        color: #ff6347;
+    }
+</style>
+""",
+    unsafe_allow_html=True,
+)
+
 
 def main():
     st.title("JJ's To Do App")
     menu = ["Create", "Read", "Update", "Delete", "About"]
-    choice = st.sidebar.selectbox("Menu", menu)
+    choice = st.sidebar.radio("Menu", menu, index=0)
 
     create_table()
 

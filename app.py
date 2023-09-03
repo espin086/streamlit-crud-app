@@ -1,14 +1,15 @@
-import streamlit as st
 import pandas as pd
 import plotly.express as px
+import streamlit as st
+
 from db_fxn import (
-    create_table,
     add_data,
-    view_all_data,
-    get_task,
-    view_unique_tasks,
-    update_task_data,
+    create_table,
     delete_data,
+    get_task,
+    update_task_data,
+    view_all_data,
+    view_unique_tasks,
 )
 
 # Apply some custom CSS
